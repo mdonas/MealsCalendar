@@ -1,0 +1,373 @@
+{
+    "comidas": [
+      {
+        "titulo": "Ternera con cuscus y guisantes",
+        "ingredientes": [
+          {
+            "ingrediente": "Ternera magra",
+            "cantidad": "300 gramos"
+          },
+          {
+            "ingrediente": "Cuscús",
+            "cantidad": "90 gramos"
+          },
+          {
+            "ingrediente": "Guisantes cocidos",
+            "cantidad": "200 gramos"
+          }
+        ],
+        "pasos": [
+          "Hierve agua y cocina el cuscús durante 3 minutos, luego deja reposar 2 minutos más y escúrrelo.",
+          "Corta la ternera en tiras y cocínala en una sartén con aceite de oliva.",
+          "Añade los guisantes a la sartén y salpimienta.",
+          "Incorpora el cuscús a la sartén y mezcla bien.",
+          "Sirve el plato caliente."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Merluza con arroz y judias verdes",
+        "ingredientes": [
+          {
+            "ingrediente": "Arroz blanco",
+            "cantidad": "105 gramos"
+          },
+          {
+            "ingrediente": "Merluza",
+            "cantidad": "350 gramos"
+          },
+          {
+            "ingrediente": "Judías verdes",
+            "cantidad": "175 gramos"
+          },
+          {
+            "ingrediente": "Queso parmesano",
+            "cantidad": "25 gramos"
+          }
+        ],
+        "pasos": [
+          "Cocina el arroz en una olla con el triple de su peso en agua durante 13 minutos.",
+          "Saltea las judías verdes en una sartén con aceite de oliva.",
+          "Añade la merluza cortada en cubos a la sartén y salpimienta.",
+          "Una vez cocido el arroz, añádelo a la sartén junto con el queso parmesano.",
+          "Integra bien todos los ingredientes y sirve."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": true
+      },
+      {
+        "titulo": "Pollo con boniato y zanahorias",
+        "ingredientes": [
+          {
+            "ingrediente": "Pechuga de pollo",
+            "cantidad": "370 gramos"
+          },
+          {
+            "ingrediente": "Zanahoria",
+            "cantidad": "1 Unidad mediana (160 gramos)"
+          },
+          {
+            "ingrediente": "Boniato",
+            "cantidad": "2 unidad (300 gramos)"
+          }
+        ],
+        "pasos": [
+          "Limpia y corta el pollo en cubos.",
+          "Pela y corta el boniato y las zanahorias en cubos pequeños.",
+          "Cocina el pollo en una sartén con aceite de oliva.",
+          "Añade el boniato y las zanahorias, revuelve bien.",
+          "Condimenta con zumo de limón, sal, pimienta, ajo en polvo y hierbas provenzales.",
+          "Cocina hasta que todos los ingredientes estén listos y sirve."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Arroz con pollo y tomate",
+        "ingredientes": [
+          {
+            "ingrediente": "Arroz blanco",
+            "cantidad": "100 gramos"
+          },
+          {
+            "ingrediente": "Pechuga de pollo",
+            "cantidad": "300 gramos"
+          },
+          {
+            "ingrediente": "Tomate",
+            "cantidad": "2 Unidad mediana (280 gramos)"
+          }
+        ],
+        "pasos": [
+          "Cocina el arroz con el triple de su peso en agua durante 13 minutos.",
+          "Cocina el pollo en una sartén antiadherente con la mitad del aceite.",
+          "Condimenta el pollo con pimienta, pimentón o hierbas provenzales.",
+          "Lava y corta el tomate.",
+          "Sirve el arroz con el pollo y el tomate, aliñando con el resto del aceite."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Bistec a la plancha con patatas y ensalada",
+        "ingredientes": [
+          {
+            "ingrediente": "Patatas",
+            "cantidad": "3 Unidad mediana (420 gramos)"
+          },
+          {
+            "ingrediente": "Ternera magra",
+            "cantidad": "300 gramos"
+          },
+          {
+            "ingrediente": "Lechuga, endivias y brotes",
+            "cantidad": "50 gramos"
+          },
+          {
+            "ingrediente": "Tomate",
+            "cantidad": "1 Unidad mediana (140 gramos)"
+          },
+          {
+            "ingrediente": "Zanahoria",
+            "cantidad": "0.5 Unidad mediana (80 gramos)"
+          }
+        ],
+        "pasos": [
+          "Precalienta el horno a 200°C.",
+          "Lava y corta las patatas en gajos, condiméntalas con especias, sal, pimienta y aceite, y hornéalas durante 30 minutos.",
+          "Prepara una ensalada mixta con lechuga, endivias, brotes, pepino, tomate y zanahoria.",
+          "Cocina el bistec de ternera a la plancha.",
+          "Sirve el bistec con las patatas horneadas y la ensalada."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Salmon a la plancha con boniato y zanahorias chips",
+        "ingredientes": [
+          {
+            "ingrediente": "Salmón",
+            "cantidad": "380 gramos"
+          },
+          {
+            "ingrediente": "Boniato",
+            "cantidad": "2 unidad (300 gramos)"
+          },
+          {
+            "ingrediente": "Zanahoria",
+            "cantidad": "1 Unidad mediana (160 gramos)"
+          }
+        ],
+        "pasos": [
+          "Lava y corta el boniato y las zanahorias en rodajas finas.",
+          "Salpimienta los chips de boniato y zanahoria y cocínalos en airfryer durante 15-20 minutos.",
+          "Cocina el salmón en una plancha o sartén, vuelta y vuelta.",
+          "Aliña y sirve el salmón acompañado de los chips de boniato y zanahoria."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": true
+      },
+      {
+        "titulo": "Noquis con pavo, setas y queso ricotta",
+        "ingredientes": [
+          {
+            "ingrediente": "Ñoquis fresco",
+            "cantidad": "220 gramos"
+          },
+          {
+            "ingrediente": "Pechuga de pavo",
+            "cantidad": "300 gramos"
+          },
+          {
+            "ingrediente": "Setas",
+            "cantidad": "160 gramos"
+          },
+          {
+            "ingrediente": "Queso ricotta",
+            "cantidad": "80 gramos"
+          }
+        ],
+        "pasos": [
+          "Lava las setas y córtalas, luego corta el pavo en cubos.",
+          "Saltea el pavo y las setas en una sartén con aceite de oliva.",
+          "Añade sal, pimienta, pimentón y nuez moscada al gusto.",
+          "Cocina los ñoquis en agua hirviendo durante 1 minuto o en airfryer si prefieres textura crujiente.",
+          "Añade los ñoquis y la ricotta a la sartén, integra bien y sirve."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      }
+    ],
+    "cenas": [
+      {
+        "titulo": "Lubina al horno con patatas y calabacin",
+        "ingredientes": [
+          {
+            "ingrediente": "Lubina",
+            "cantidad": "350 gramos"
+          },
+          {
+            "ingrediente": "Patatas",
+            "cantidad": "2.5 Unidad mediana (350 gramos)"
+          },
+          {
+            "ingrediente": "Calabacín",
+            "cantidad": "1 unidad (250 gramos)"
+          },
+          {
+            "ingrediente": "Cebolla",
+            "cantidad": "1 unidad (200 gramos)"
+          }
+        ],
+        "pasos": [
+          "Pela y corta las patatas y el calabacín a rodajas finas.",
+          "Pela y corta la cebolla en juliana.",
+          "Reparte en una bandeja para horno las patatas y el calabacín salpimentados, añade un poco de aceite y la cebolla.",
+          "Hornea todo durante 20 minutos.",
+          "Retira la bandeja, coloca la lubina con cortes transversales, salpimienta y añade limón y perejil si deseas.",
+          "Hornea otros 15 minutos y sirve."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": true
+      },
+      {
+        "titulo": "Bacalao con pure de patatas y queso parmesano",
+        "ingredientes": [
+          {
+            "ingrediente": "Bacalao",
+            "cantidad": "300 gramos"
+          },
+          {
+            "ingrediente": "Patatas",
+            "cantidad": "3 Unidad mediana (420 gramos)"
+          },
+          {
+            "ingrediente": "Queso parmesano",
+            "cantidad": "50 gramos"
+          }
+        ],
+        "pasos": [
+          "Lava y corta las patatas, luego cocínalas en una olla con abundante agua.",
+          "Una vez cocidas, haz un puré con un pisapatatas o tenedor.",
+          "Salpimenta el puré y añade el queso parmesano.",
+          "Cocina el bacalao en una sartén o plancha, vuelta y vuelta.",
+          "Sirve el bacalao junto al puré de patatas."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": true
+      },
+      {
+        "titulo": "Tortilla francesa con arroz integral y verduras",
+        "ingredientes": [
+          {
+            "ingrediente": "Arroz integral",
+            "cantidad": "75 gramos"
+          },
+          {
+            "ingrediente": "Huevo entero",
+            "cantidad": "4 unidad (232 gramos)"
+          },
+          {
+            "ingrediente": "Claras de huevo",
+            "cantidad": "7 unidad (210 gramos)"
+          },
+          {
+            "ingrediente": "Menestra de verduras",
+            "cantidad": "250 gramos"
+          }
+        ],
+        "pasos": [
+          "Cocina el arroz integral en agua hirviendo durante 20-25 minutos y resérvalo.",
+          "Saltea las verduras en una sartén con aceite de oliva y especias al gusto, luego resérvalas.",
+          "Bate los huevos y las claras, y cocina una tortilla francesa en una sartén caliente.",
+          "Sirve la tortilla acompañada de las verduras y el arroz cocido."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Hamburguesa de pavo completa",
+        "ingredientes": [
+          { "ingrediente": "Hamburguesa de pavo", "cantidad": "310 gramos" },
+          {
+            "ingrediente": "Pan hamburguesa",
+            "cantidad": "2 unidad (140 gramos)"
+          },
+          {
+            "ingrediente": "Tomate",
+            "cantidad": "2 Unidad mediana (280 gramos)"
+          },
+          { "ingrediente": "Rúcula", "cantidad": "40 gramos" }
+        ],
+        "pasos": [
+          "Cocina la hamburguesa de pavo en una sartén, vuelta y vuelta.",
+          "Corta los tomates en rodajas.",
+          "Arma la hamburguesa con el pan integral, los tomates, el aceite y la rúcula.",
+          "Sirve la hamburguesa."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Salmon con boniato y menestra de verduras",
+        "ingredientes": [
+          { "ingrediente": "Salmón", "cantidad": "300 gramos" },
+          { "ingrediente": "Boniato", "cantidad": "1.75 unidad (262 gramos)" },
+          { "ingrediente": "Menestra de verduras", "cantidad": "250 gramos" }
+        ],
+        "pasos": [
+          "Cocina el boniato cortado en rodajas en el horno o airfryer.",
+          "Cocina las verduras al horno, hervidas, a la plancha o en airfryer.",
+          "Cocina el salmón a la plancha.",
+          "Sirve el salmón acompañado de las verduras y el boniato."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": true
+      },
+      {
+        "titulo": "Pasta integral con huevo y verduras",
+        "ingredientes": [
+          { "ingrediente": "Huevo entero", "cantidad": "3 unidad (174 gramos)" },
+          {
+            "ingrediente": "Claras de huevo",
+            "cantidad": "6 unidad (180 gramos)"
+          },
+          {
+            "ingrediente": "Pasta alimenticia, integral",
+            "cantidad": "115 gramos"
+          },
+          { "ingrediente": "Menestra de verduras", "cantidad": "250 gramos" }
+        ],
+        "pasos": [
+          "En una sartén con aceite de oliva, cocina las verduras con especias al gusto.",
+          "Añade la pasta cocida y saltea un par de minutos para integrar sabores.",
+          "Prepara una tortilla francesa o revuelto con los huevos y claras.",
+          "Sirve el salteado de pasta con verduras junto a la tortilla."
+        ],
+        "tiene_carne": false,
+        "tiene_pescado": false
+      },
+      {
+        "titulo": "Pollo con garbanzos y pimientos",
+        "ingredientes": [
+          { "ingrediente": "Garbanzos en conserva", "cantidad": "225 gramos" },
+          { "ingrediente": "Pechuga de pollo", "cantidad": "275 gramos" },
+          {
+            "ingrediente": "Pimiento (rojo, amarillo o verde)",
+            "cantidad": "1 unidad (200 gramos)"
+          },
+          { "ingrediente": "Cebolla", "cantidad": "1 unidad (200 gramos)" }
+        ],
+        "pasos": [
+          "En una sartén con aceite caliente, saltea la cebolla y ajo picados hasta que doren.",
+          "Añade el pimiento en juliana y el pollo troceado.",
+          "Cocina hasta que el pollo y las verduras estén bien cocidos.",
+          "Incorpora los garbanzos escurridos y cocina 2 minutos más para integrar sabores."
+        ],
+        "tiene_carne": true,
+        "tiene_pescado": false
+      }
+    ]
+  }
+  
