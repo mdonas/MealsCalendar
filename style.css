@@ -1,0 +1,283 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff; 
+    color: #333333;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: #fafafa;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    border-color: #888;
+    background-color: #f0f0f0;
+}
+
+.upload-icon {
+    font-size: 48px;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.day-card {
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+}
+
+.meal-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.meal-section {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lunch-section {
+    background-color: #d0e7ff;   /* light blue */
+}
+
+.dinner-section {
+    background-color: #d0ffd8;  /* light green */
+}
+
+.error-section {
+    background-color: #5a1a1a;
+    color: #f1f1f1;
+}
+
+.btn-generate {
+    background-color: #5a9;
+    border-color: #478;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.btn-generate:hover {
+    background-color: #478;
+    border-color: #424;
+}
+
+.btn-start-over {
+    background-color: #555;
+    border-color: #444;
+}
+
+.btn-start-over:hover {
+    background-color: #444;
+    border-color: #393;
+}
+
+.spinner-grow {
+    width: 1rem;
+    height: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.day-header {
+    font-weight: bold;
+    background-color: #444;
+    color: #f1f1f1;
+    padding: 1.5rem 8px 8px;    /* ↑ extra top padding so the icon won't overlap */
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #5a9;
+}
+
+.file-name {
+    font-style: italic;
+    color: #8fd19e;
+    font-weight: 500;
+}
+
+.alert-danger {
+    background-color: #a83c3c;
+    color: #f1f1f1;
+}
+.alert-danger .btn-close {
+    filter: invert(1);
+}
+
+.alert-error {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hidden {
+    display: none;
+}
+
+/* New: expandable details panel */
+.recipe-details {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: #333;
+
+    /* UPDATED: add opacity transition */
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.recipe-details.open {
+    /* sufficiently large to show contents */
+    max-height: 500px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    /* UPDATED: fade in */
+    opacity: 1;
+}
+.recipe-details h5 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.recipe-details ul,
+.recipe-details ol {
+    margin: 0 0 0.5rem 1rem;
+    padding: 0;
+}
+
+/* Highlight label badge */
+.label-badge {
+    background-color: #5a9;
+    color: #fff;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+/* PDF Export Button */
+.btn-export-pdf {
+    background-color: #dc3545;
+    border-color: #c82333;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.btn-export-pdf:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    color: white;
+}
+
+.btn-export-pdf:disabled {
+    background-color: #e99;
+    border-color: #e77;
+}
+
+/* PDF Preview Container */
+#pdf-preview-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* PDF Export Status */
+.export-status {
+    display: inline-block;
+    margin-left: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+/* PDF Style */
+@media print {
+    .pdf-day {
+        page-break-after: always;
+        margin-bottom: 30px;
+    }
+    
+    .pdf-day-header {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+    }
+    
+    .pdf-meal-title {
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    .pdf-ingredients-title {
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .pdf-steps-title {
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .pdf-ingredients-list {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .pdf-steps-list {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+}
