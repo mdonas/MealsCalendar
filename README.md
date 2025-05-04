@@ -78,13 +78,6 @@ Your recipe JSON file should follow this structure:
 }
 ```
 
-## Setup Instructions
-
-1. Clone or download this repository
-2. No build steps required - this is a static web application
-3. Open `index.html` in your web browser
-4. Alternatively, host the files on any static web server
-
 ## Browser Compatibility
 
 - Chrome (Recommended)
