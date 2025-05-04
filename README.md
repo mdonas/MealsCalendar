@@ -10,6 +10,8 @@ This application allows users to upload a JSON file with recipe data and automat
 
 - **Dynamic Meal Plan Generation**: Automatically creates a balanced 14-day menu
 - **No Same-Day Ingredient Repetition**: Ensures ingredients are not repeated in the same day's meals
+- **No Same-Day Type Repetition**: Ensures don't eat meat or fish at dinner if you eat it at lunch
+- **No Same Meal**: Ensures you eat the same meal at least 2 days apart
 - **Recipe JSON Upload**: Load your custom recipes from a JSON file
 - **Recipe Details View**: Click on any meal to see detailed ingredients and preparation steps
 - **Editable Plan**: Modify any day's meal plan by choosing from available recipes
