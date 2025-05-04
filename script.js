@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generateBtnText.textContent = 'Generar Menú';
             
             // Auto-trigger PDF export
-            exportToPdf();
+            //exportToPdf();
             
             // Show error alert if any days failed to generate
             const hasErrors = menuData.some(day => day.error);
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const lunchIngsNames  = new Set(lunch.ingredientes.map(x => x.ingrediente));
                 const dinnerIngsNames = new Set(dinner.ingredientes.map(x => x.ingrediente));
                 const shared = [...lunchIngsNames].some(ing => dinnerIngsNames.has(ing));
-                if (shared) continue;
+                if (shared.length > 1 || (shared.length === 1 && shared[0].toLowerCase() !== "tomate")) continue;
                 
                 // b) not used in same slot last two days
                 const prevLunches = days.slice(-2).map(d => d.lunch).filter(Boolean);
@@ -229,10 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if((lunch.tiene_carne && dinner.tiene_carne)|| (lunch.tiene_pescado && dinner.tiene_pescado)){
                     continue;
                 }
-                console.log("Combi")
-                console.log(lunch)
-                console.log(dinner)
-                console.log("------")
                 // if ok, push and mark found
                 days.push({
                     day:     dayNumber,
@@ -331,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Export to PDF functionality
+    // Export to PDF functionality<
     function exportToPdf() {
         if (!menuData) return;
         
