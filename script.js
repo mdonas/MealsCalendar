@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const exportStatus = document.getElementById('export-status');
     const pdfPreviewContainer = document.getElementById('pdf-preview-container');
     const pdfContent = document.getElementById('pdf-content');
+    const jsonExampleContainer = document.getElementById('json-example-container');
 
     // State
     let recipes = null;
@@ -49,19 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     uploadArea.addEventListener('dragover', (e) => {
         e.preventDefault();
-        uploadArea.style.borderColor = '#5a9';
-        uploadArea.style.backgroundColor = '#3d3d3d';
+        uploadArea.style.borderColor = '#28a745';
+        uploadArea.style.backgroundColor = '#333';
     });
 
     uploadArea.addEventListener('dragleave', () => {
-        uploadArea.style.borderColor = '#dee2e6';
-        uploadArea.style.backgroundColor = '#fff';
+        uploadArea.style.borderColor = '#555';
+        uploadArea.style.backgroundColor = '#2a2a2a';
     });
 
     uploadArea.addEventListener('drop', (e) => {
         e.preventDefault();
-        uploadArea.style.borderColor = '#dee2e6';
-        uploadArea.style.backgroundColor = '#fff';
+        uploadArea.style.borderColor = '#555';
+        uploadArea.style.backgroundColor = '#2a2a2a';
 
         if (e.dataTransfer.files.length) {
             handleFile(e.dataTransfer.files[0]);
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fileInfo.classList.add('hidden');
         exportPdfContainer.classList.add('hidden');
         pdfPreviewContainer.classList.add('hidden');
+        jsonExampleContainer.classList.remove('hidden');
         generateBtn.disabled = true;
         fileInput.value = '';
         recipes = null;
@@ -101,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // Functions
     function normalizarIngrediente(listadoIngredientes) {
-        console.log(listadoIngredientes)
         let resultado = new Set();
         for (let nombre of listadoIngredientes) {
             const nombreLower = nombre.toLowerCase();
@@ -123,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultado.add(nombreLower); // 💡 Si no se normalizó, se añade tal cual
             }
         }
-        console.log(resultado)
         return resultado
     }
     function handleFile(file) {
@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fileInfo.classList.remove('hidden');
                 generateBtn.disabled = false;
                 errorContainer.classList.add('hidden');
+                jsonExampleContainer.classList.add('hidden');
 
             } catch (e) {
                 showError('El archivo JSON no es válido');
@@ -207,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuContainer.classList.remove('hidden');
             startOverBtn.classList.remove('hidden');
             exportPdfContainer.classList.remove('hidden');
+            jsonExampleContainer.classList.add('hidden');
             generateBtn.disabled = false;
             loadingSpinner.classList.add('hidden');
             generateBtnText.textContent = 'Generar Menú';
@@ -346,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add edit button (pencil icon) to top-right
             const editBtn = document.createElement('button');
-            editBtn.className = 'btn btn-sm btn-light btn-pencil';
+            editBtn.className = 'btn btn-sm btn-secondary btn-pencil';
             editBtn.style.top = '8px';    /* move it just below the extra header padding */
             editBtn.style.right = '8px';
             editBtn.innerHTML = '<i class="bi bi-pencil"></i>';
@@ -430,28 +432,32 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // ---- PREPARACIÓN ----
-            doc.setFont(undefined, 'bold');
-            doc.text(`Preparación:`, 15, posY);
-            posY += 5;
-            doc.setFont(undefined, 'normal');
-            day.lunchObj.pasos.forEach(step => {
-                doc.text(`- ${step}`, 20, posY);
+            if (day.lunchObj.pasos.length != 0) {
+                console.log(day.lunchObj.pasos)
+                doc.setFont(undefined, 'bold');
+                doc.text(`Preparación:`, 15, posY);
                 posY += 5;
-            });
+                doc.setFont(undefined, 'normal');
+                day.lunchObj.pasos.forEach(step => {
+                    doc.text(`- ${step}`, 5, posY);
+                    posY += 5;
+                });
+            }
+
 
             // ---- MACROS ----
-            doc.setFontSize(10);
-            doc.setFont(undefined, 'bold');
-            doc.text(`Macros:`, 15, posY);
-            posY += 5;
+            // doc.setFontSize(10);
+            // doc.setFont(undefined, 'bold');
+            // doc.text(`Macros:`, 15, posY);
+            // posY += 5;
 
-            doc.setFont(undefined, 'normal');
-            let text1 = "";
-            day.lunchObj.macros.forEach(mac => {
-                text1 += `${mac.titulo} = ${mac.cantidad};  `;
-            });
-            doc.text(text1, 20, posY)
-            posY += 5;
+            // doc.setFont(undefined, 'normal');
+            // let text1 = "";
+            // day.lunchObj.macros.forEach(mac => {
+            //     text1 += `${mac.titulo} = ${mac.cantidad};  `;
+            // });
+            // doc.text(text1, 20, posY)
+            // posY += 5;
 
             // Dinner section
             doc.setFontSize(12);
@@ -472,30 +478,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // ---- PREPARACIÓN ----
-            doc.setFont(undefined, 'bold');
-            doc.text(`Preparación:`, 15, posY);
-            posY += 5;
-            doc.setFont(undefined, 'normal');
-            day.dinnerObj.pasos.forEach(step => {
-                doc.text(`- ${step}`, 20, posY);
+            if (day.dinnerObj.pasos.length != 0) {
+                doc.setFont(undefined, 'bold');
+                doc.text(`Preparación:`, 15, posY);
                 posY += 5;
-            });
+                doc.setFont(undefined, 'normal');
+                day.dinnerObj.pasos.forEach(step => {
+                    doc.text(`- ${step}`, 5, posY);
+                    posY += 5;
+                });
+            }
 
-            // ---- MACROS ----
-            doc.setFontSize(10);
-            doc.setFont(undefined, 'bold');
-            doc.text(`Macros:`, 15, posY);
-            posY += 5;
 
-            doc.setFont(undefined, 'normal');
-            let text = "";
-            day.dinnerObj.macros.forEach(mac => {
-                text += `${mac.titulo} = ${mac.cantidad};  `;
-            });
-            doc.text(text, 20, posY);
+            // // ---- MACROS ----
+            // doc.setFontSize(10);
+            // doc.setFont(undefined, 'bold');
+            // doc.text(`Macros:`, 15, posY);
+            // posY += 5;
 
-            // MACROS TOTALES
-
+            // doc.setFont(undefined, 'normal');
+            // let text = "";
+            // day.dinnerObj.macros.forEach(mac => {
+            //     text += `${mac.titulo} = ${mac.cantidad};  `;
+            // });
+            // doc.text(text, 20, posY);
 
             // extra spacing to separate days
             posY += 10;
